@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>添加新任务</title>
+<script>
+	function check(){
+		var name=document.form1.taskname;
+		if(name.value==""){
+			alert("请输入任务名称");
+			name.focus();
+			return false;
+		}
+		
+		var owner=document.form1.taskowner;
+		if(owner.value==""){
+			alert("请输入任务发布者");
+			owner.focus();
+			return false;
+		}
+		var intro=document.form1.taskintro.value;
+		if(intro==""){
+			alert("请输入任务描述");
+			intro.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+<h1 style="color:red;">请输入任务信息，不能为空</h1>
+<form action="addtask.jsp" method="post" name="form1" id="form1" accept-charset="UTF-8" onsubmit="return check()">
+	任务名称:<input type="text" name="taskname" id="taskname"><br>
+	任务发布者:<input type="text" name="taskowner" id="taskowner"><br>
+	任务描述:<input type="text" name="taskintro" id="taskintro"><br>
+	<input type="submit" value="添加">&nbsp;&nbsp;
+	<input type="reset" value="重置">
+</form>
+</body>
+</html>
