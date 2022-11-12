@@ -11,4 +11,4 @@
 
 1. 首先安装Mysql5.7，设置用户名为root，密码为123456，并保证其在运行状态，并执行yunleyi36.sql文件导入数据。
 2. 项目导入进eclipse，配置好Tomcat，启动
-3. 使用浏览器访问http://localhost:8080即可进入系统。
+3. 使用浏览器访问http://localhost:8080 即可进入系统。
